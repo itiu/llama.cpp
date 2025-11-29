@@ -15,7 +15,7 @@
 
 #define DEFAULT_OAICOMPAT_MODEL "gpt-3.5-turbo"
 
-const static std::string build_info("b" + std::to_string(LLAMA_BUILD_NUMBER) + "-" + LLAMA_COMMIT);
+const static std::string build_info("b" + std::to_string(LLAMA_BUILD_NUMBER) + "-" + LLAMA_COMMIT + " [itiu fork]");
 
 using json = nlohmann::ordered_json;
 
