@@ -19,7 +19,7 @@ Please disclose it as a private [security advisory](https://github.com/ggml-org/
 A team of volunteers on a reasonable-effort basis maintains this project. As such, please give us at least 90 days to work on a fix before public exposure.
 
 > [!IMPORTANT]
-> For collaborators: if you are interested in helping out with reviewing privting security disclosures, please see: https://github.com/ggml-org/llama.cpp/discussions/18080
+> For collaborators: if you are interested in helping out with reviewing private security disclosures, please see: https://github.com/ggml-org/llama.cpp/discussions/18080
 
 ## Requirements
 
@@ -38,7 +38,11 @@ Only vulnerabilities that fall within these parts of the project are considered 
 - `src/**/*`
 - `ggml/**/*`
 - `gguf-py/**/*`
-- `tools/server/*` (note: Web UI is not covered)
+- `tools/server/*`, **excluding** the following topics:
+    - Web UI
+    - Features marked as experimental
+    - Features not recommended for use in untrusted environments (e.g., router, MCP)
+    - Bugs that can lead to Denial-of-Service attack
 
 Note that none of the topics under [Using llama.cpp securely](#using-llamacpp-securely) are considered vulnerabilities in LLaMA C++.
 
